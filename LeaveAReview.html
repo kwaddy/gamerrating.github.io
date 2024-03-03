@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Gaming Rating review page">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Kayla Waddy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leave a Review</title>
+        <img src="GamerRating.png" height="200" width="200" alt="Gamer rating Logo">
+        <h1>Leave A Review</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="#RecentReview">Recent Reviews</a></li>
+                <li><a href="#GameCatalog">Game Catalog</a></li>
+            </ul>
+        </nav>
+    </head>
+    <body>
+        <div>
+        <p>
+            Welcome to the review page! Here you will be able to enter a review for any game that is
+            available from the drop down list. After selecting the game, you will then enter a rating
+            based on a scale out +of 5 stars (1 star is the lowest rating, 5 is the highest). Afterwards,
+            you will have the choice on whether you wish to leave a comment and whether or not you want
+            to remain anonymous! That is it!
+        </p>
+        </div>
+        <div>
+        <p>
+            Select a game:
+            <input list="game">
+            <datalist id="game">
+                <option value="Overwatch">Overwatch</option>
+                <option value="Halo">Halo</option>
+                <option value="Minecraft">Minecraft</option>
+                <option value="supersmash">Super Smash Bros</option>
+                <option value="Skyrim">The Elder Scrolls V:Skyrim</option>
+                <option value="apex">Apex</option>
+            </datalist>
+        </p>
+        </div>
+        <div>
+        <p>Rating [type 1-5]:
+            <input type="text" required="[1-5]">
+        </p>
+        </div>
+        <div>
+            <p>
+                <textarea name="review" rows="5" cols="30">Leave a comment?[Optional]</textarea>
+                <label for="anon">Anonymous:</label>
+                <input type="checkbox" name="anon" id="anon">
+            </p>
+        </div>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+
+        <footer>
+            <span>&copy; 2024 Gamer Rating </span>
+        </footer>
+    </body>
+</html>
