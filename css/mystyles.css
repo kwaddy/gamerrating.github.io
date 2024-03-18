@@ -1,5 +1,5 @@
 /* Setting the font for both of the classes*/
-div, li {
+div, li, h1 {
    font-family: Helvetica;
 }
 /* Centers the ul to the center of the screen*/
@@ -20,4 +20,8 @@ li {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+/* A way to center all the headers on a page*/ 
+h1 {
+    text-align: center;
 }
