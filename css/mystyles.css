@@ -22,6 +22,6 @@ li {
     width: 50%;
 }
 /* A way to center all the headers on a page*/ 
-h1 {
+h1, h3 {
     text-align: center;
 }
