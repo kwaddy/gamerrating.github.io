@@ -1,3 +1,23 @@
-div {
+/* Setting the font for both of the classes*/
+div, li {
    font-family: Helvetica;
+}
+/* Centers the ul to the center of the screen*/
+ul {
+    text-align: center;
+}
+/* This is to set the list so it is going from left to right instead of up and down*/ 
+li {
+    list-style: none;
+    display:inline;
+
+}
+/* A class to center the image to the screen
+   instead of defaulting to the side of the page*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
