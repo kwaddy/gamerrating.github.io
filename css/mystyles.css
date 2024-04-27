@@ -43,7 +43,6 @@ img {
 /*  A class to work with the images in class tile */ 
 img.tile {
     display: inline-block;
-    float:left;
     height: 200px;
     width: 150px;
 }
