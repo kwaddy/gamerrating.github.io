@@ -40,50 +40,20 @@ img {
     border-radius: 20%;
 }
 
-    /* Define animation */
-    @keyframes slideRight {
-        from { transform: translateX(100%); }
-        to { transform: translateX(0); }
-    }
+/* Define animation */
+@keyframes slideRightToLeft {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
 
-    @keyframes slideLeft {
-        from { transform: translateX(0); }
-        to { transform: translateX(-100%); }
-    }
+/* Apply animation to the container */
+.animated-container {
+    display: flex;
+    overflow: hidden;
+}
 
-    /* Apply animation to containers */
-    .animated-container {
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Apply animation to images */
-    .animated-picture {
-        position: absolute;
-        width: 200px;
-        height: 150px;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    /* Adjust animation delay for each image */
-    .animated-picture:nth-child(2) {
-        animation-delay: 1s; /* Delay for the second image */
-    }
-
-    .animated-picture:nth-child(3) {
-        animation-delay: 2s; /* Delay for the third image */
-    }
-
-    .animated-picture:nth-child(4) {
-        animation-delay: 3s; /* Delay for the fourth image */
-    }
-
-    .animated-picture:nth-child(5) {
-        animation-delay: 4s; /* Delay for the fifth image */
-    }
-
-    .animated-picture:nth-child(6) {
-        animation-delay: 5s; /* Delay for the sixth image */
-    }
+/* Apply animation to images */
+.animated-picture {
+    margin-right: 50px;
+    animation: slideRightToLeft 10s linear infinite;
+}
