@@ -4,7 +4,7 @@ div, li, h1 {
 }
 /* Centers the ul to the center of the screen. Centered the footer as well
     so all the information is center down on the page*/
-ul, footer {
+ul, footer, img.tile {
     text-align: center;
 }
 /* This is to set the list so it is going from left to right instead of up and down*/ 
