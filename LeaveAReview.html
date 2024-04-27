@@ -36,57 +36,7 @@
             </ul>
         </nav>
     </div>
-<style>
-     /* Form container styles */
-     .form-container {
-        max-width: 500px;
-        margin: 20px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
 
-    /* Form field styles */
-    .form-field {
-        margin-bottom: 20px;
-    }
-
-    .form-field label {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    .form-field input[type="text"],
-    .form-field input[type="number"],
-    .form-field textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-
-    .form-field textarea {
-        height: 100px;
-    }
-
-    /* Button styles */
-    .form-btn {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .form-btn:hover {
-        background-color: #0056b3;
-    }
-</style>
     <body>
         <!-- Starting off with the intro regarding what the webpage will be organized as -->
         <!-- There will be a main container to house all the different components of the
@@ -104,91 +54,43 @@
                     cry!
                 </p>
             </div>
-            <script>
-                function saveReview() {
-                // Get form inputs
-                    var game = document.getElementById("game").value;
-                    var name = document.getElementById("name").value;
-                    var rating = document.getElementById("rating").value;
-                    var review = document.getElementById("description").value;
-
-                // Create a JSON object with the form data
-                    var reviewData = {
-                        "game": game,
-                        "name": name,
-                        "rating": rating,
-                        "review": review
-                    };
-
-                // Convert JSON object to string
-                var jsonData = JSON.stringify(reviewData);
-
-                // Create a Blob object to hold the JSON data
-              var blob = new Blob([jsonData], { type: "application/json" });
-
-                // Create a link to download the JSON file
-                var url = URL.createObjectURL(blob);
-                var a = document.createElement("a");
-                a.href = url;
-                a.download = "review.json";
-                document.body.appendChild(a);
-                a.click();
-
-                // Clean up
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            }
-                
-            </script>
-            <!--A form that will take in the entire user's review-->
-            <form action="game-review" method="post">
-                <fieldset>
-                    <legend>Game Review</legend>
-                    <p>Select a Game</p>
-                    <div>
-                        <select name="game-catalog">
-                            <option value="apex">Apex Legends</option>
-                            <option value="halo">Halo</option>
-                            <option value="minecraft">Minecraft</option>
-                            <option value="overwatch2">Overwatch 2</option>
-                            <option value="supersmash">Super Smash Bros Ultimate</option>
-                            <option value="skyrim">The Elder Scrolls V: Skyrim</option>
-                        </select>
-                    </div>
-                    
-                    <!--Name for user to put their information under-->
-                    <div class="input-group">
-                        <label for="name">Name :</label>
-                        <input id="name" name="name" type="text">
-                    </div>
-
-                    <!--Where the user puts in thier rating for the game, this is REQUIRED-->
-                    <div class="input-group">
-                        <label for="rating">Rating (1-5) :</label>
-                        <input id="rating" name="rating" type="text" min="1" max="5" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="reviewText">Your Thoughts :</label>
-                        <textarea id="description" class="textarea" name="description" rows="2" cols="10" ></textarea>
-                    </div>
-                </fieldset>
-                <button type="button" onclick="saveReview()">Submit</button>
-            </form>
-            
-           <!-- A script to store the login information of a user -->
-
-            <!-- A script to pull up the window making sure that the user is ready to submit
-                their review-->
-            <script>
-
-            </script>
-            <!--A script to submit the infromation to another JSON file that will be called
-                on the recent reviews page-->
-            <script>
-
-            </script>
-
+            <div class="form-container">
+                <form id="reviewForm">
+                    <fieldset>
+                        <legend>Game Review</legend>
+                        <p>Select a Game</p>
+                        <div>
+                            <select name="game-catalog">
+                                <option value="apex">Apex Legends</option>
+                                <option value="halo">Halo</option>
+                                <option value="minecraft">Minecraft</option>
+                                <option value="overwatch2">Overwatch 2</option>
+                                <option value="supersmash">Super Smash Bros Ultimate</option>
+                                <option value="skyrim">The Elder Scrolls V: Skyrim</option>
+                            </select>
+                        </div>
+                        
+                        <!--Name for user to put their information under-->
+                        <div class="input-group">
+                            <label for="name">Name :</label>
+                            <input id="name" name="name" type="text">
+                        </div>
+    
+                        <!--Where the user puts in thier rating for the game, this is REQUIRED-->
+                        <div class="input-group">
+                            <label for="rating">Rating (1-5) :</label>
+                            <input id="rating" name="rating" type="text" min="1" max="5" required>
+                        </div>
+    
+                        <div class="input-group">
+                            <label for="reviewText">Your Thoughts :</label>
+                            <textarea id="description" class="textarea" name="description" rows="2" cols="10" ></textarea>
+                        </div>
+                    </fieldset>
+                    <button type="button" onclick="saveReview()">Submit</button>
+                </form>                
+            </div>
+            <
         </main>
         <footer>
             <span>&copy; 2024 Gamer Rating </span>
