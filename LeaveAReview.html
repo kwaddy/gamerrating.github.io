@@ -57,17 +57,20 @@
             
             <!--A form that will take in the entire user's review-->
             <form action="game-review" method="post">
-                <div>
+                <fieldset>
                     <legend>Game Review</legend>
-                    <select name="game-catalog">
-                        <option value="apex">Apex Legends</option>
-                        <option value="halo">Halo</option>
-                        <option value="minecraft">Minecraft</option>
-                        <option value="overwatch2">Overwatch 2</option>
-                        <option value="supersmash">Super Smash Bros Ultimate</option>
-                        <option value="skyrim">The Elder Scrolls V: Skyrim</option>
-                    </select>
-                </div>
+                    <p>Select a Game: </p>
+                    <div>
+                        <select name="game-catalog">
+                            <option value="apex">Apex Legends</option>
+                            <option value="halo">Halo</option>
+                            <option value="minecraft">Minecraft</option>
+                            <option value="overwatch2">Overwatch 2</option>
+                            <option value="supersmash">Super Smash Bros Ultimate</option>
+                            <option value="skyrim">The Elder Scrolls V: Skyrim</option>
+                        </select>
+                    </div>
+                </fieldset>
             </form>
             
             <!-- A script to store the login information of a user -->
