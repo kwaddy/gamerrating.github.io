@@ -26,6 +26,46 @@
             </nav>
         </section>
         <!-- A section to hold the review information  -->
+        <div id="recentReviews"></div>
+
+    <script>
+        fetch('reviews.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(reviews => {
+                const recentReviewsDiv = document.getElementById('recentReviews');
+                // Use this to show the top reviews for a game
+                reviews.slice(-5).forEach(review => {
+                    const reviewDiv = document.createElement('div');
+                    reviewDiv.classList.add('review');
+
+                    const gameName = document.createElement('h2');
+                    gameName.textContent = review.game;
+                    reviewDiv.appendChild(gameName);
+
+                    const userName = document.createElement('p');
+                    userName.textContent = 'Name: ' + review.name;
+                    reviewDiv.appendChild(userName);
+
+                    const rating = document.createElement('p');
+                    rating.textContent = 'Rating: ' + review.rating;
+                    reviewDiv.appendChild(rating);
+
+                    const userReview = document.createElement('p');
+                    userReview.textContent = 'Review: ' + review.review;
+                    reviewDiv.appendChild(userReview);
+
+                    recentReviewsDiv.appendChild(reviewDiv);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+            });
+    </script>
         <!-- such as the username, rating, and the coment if applicable -->
     </body>
 </html>
