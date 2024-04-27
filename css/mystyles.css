@@ -33,3 +33,9 @@ h1, h3 {
 p, footer {
     font-size: large;
 }
+
+/*  Make rounded edges for all the images so that they aren't just square stock
+    images */
+img {
+    border-radius: 20%;
+} 
