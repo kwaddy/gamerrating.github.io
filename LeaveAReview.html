@@ -10,6 +10,7 @@
         gtag('config', 'G-5PFJWQZ1WE');
     </script>
 </header>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -20,7 +21,12 @@
         <title>Leave a Review</title>
         <img src="images/GamerRating.png" height="200" width="200" alt="Gamer rating Logo">
         <link rel="stylesheet" href="css/mystyles.css">
+    </head>
 
+    <!-- Placed the navigation within a contiainer so that all the different componenets
+         are in the same place across the different web pages -->
+     <div>
+        <h1>Leave A Review</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,47 +35,49 @@
                 <li><a href="gamecatalog.html">Game Catalog</a></li>
             </ul>
         </nav>
-    </head>
+    </div>
+
     <body>
-        <h1>Leave A Review</h1>
-        <div>
-        <p>
-            Welcome to the review page! Here you will be able to enter a review for any game that is
-            available from the drop down list. After selecting the game, you will then enter a rating
-            based on a scale out +of 5 stars (1 star is the lowest rating, 5 is the highest). Afterwards,
-            you will have the choice on whether you wish to leave a comment and whether or not you want
-            to remain anonymous! That is it!
-        </p>
-        </div>
-        <div>
-        <p>
-            Select a game:
-            <input list="game">
-            <datalist id="game">
-                <option value="Overwatch">Overwatch</option>
-                <option value="Halo">Halo</option>
-                <option value="Minecraft">Minecraft</option>
-                <option value="supersmash">Super Smash Bros</option>
-                <option value="Skyrim">The Elder Scrolls V: Skyrim</option>
-                <option value="apex">Apex Legends</option>
-            </datalist>
-        </p>
-        </div>
-        <div>
-        <p>Rating [type 1-5]:
-            <input type="text" required="[1-5]">
-        </p>
-        </div>
-        <div>
-            <p>
-                <textarea name="review" rows="5" cols="30">Leave a comment?[Optional]</textarea>
-                <label for="anon">Anonymous:</label>
-                <input type="checkbox" name="anon" id="anon">
-            </p>
-        </div>
-        <p>
-            <input type="submit" value="Submit">
-        </p>
+        <!-- Starting off with the intro regarding what the webpage will be organized as -->
+        <!-- There will be a main container to house all the different components of the
+             review page -->
+        <main>
+            <!-- Explaination of what the page is and specifically what the person should
+                 do to leave a review-->
+            <div>
+                <p>
+                    So you saw a game that you played and you wanted to leave a review?
+                    Well, you have come to the right place! Here, you can leave a review
+                    for any game that is down in the list below! Here you will really
+                    make a difference and show others your opinions on whether a game
+                    is so good that it made you cry or sucks so bad that you also want to
+                    cry!
+                </p>
+            </div>
+
+            <!-- A script will go here to store all the user input into a json file which can
+                 then be called upon on a later time. -->
+            <script>
+
+            </script>
+            
+            <!-- A script to store the login information of a user -->
+            <script>
+
+            </script>
+
+            <!-- A script to pull up the window making sure that the user is ready to submit
+                their review-->
+            <script>
+
+            </script>
+            <!--A script to submit the infromation to another JSON file that will be called
+                on the recent reviews page-->
+            <script>
+
+            </script>
+
+        </main>
         <footer>
             <span>&copy; 2024 Gamer Rating </span>
         </footer>
