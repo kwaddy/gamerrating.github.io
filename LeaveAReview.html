@@ -36,7 +36,57 @@
             </ul>
         </nav>
     </div>
+<style>
+     /* Form container styles */
+     .form-container {
+        max-width: 500px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
+    /* Form field styles */
+    .form-field {
+        margin-bottom: 20px;
+    }
+
+    .form-field label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-field input[type="text"],
+    .form-field input[type="number"],
+    .form-field textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .form-field textarea {
+        height: 100px;
+    }
+
+    /* Button styles */
+    .form-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .form-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
     <body>
         <!-- Starting off with the intro regarding what the webpage will be organized as -->
         <!-- There will be a main container to house all the different components of the
@@ -126,7 +176,7 @@
                 <button type="button" onclick="saveReview()">Submit</button>
             </form>
             
-<            <!-- A script to store the login information of a user -->
+           <!-- A script to store the login information of a user -->
 
             <!-- A script to pull up the window making sure that the user is ready to submit
                 their review-->
