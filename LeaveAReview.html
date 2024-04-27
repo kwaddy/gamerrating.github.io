@@ -54,7 +54,42 @@
                     cry!
                 </p>
             </div>
-            
+            <script>
+                function saveReview() {
+                // Get form inputs
+                    var game = document.getElementById("game").value;
+                    var name = document.getElementById("name").value;
+                    ar rating = document.getElementById("rating").value;
+                    var review = document.getElementById("description").value;
+
+                // Create a JSON object with the form data
+                    var reviewData = {
+                        "game": game,
+                        "name": name,
+                        "rating": rating,
+                        "review": review
+                    };
+
+                // Convert JSON object to string
+                var jsonData = JSON.stringify(reviewData);
+
+                // Create a Blob object to hold the JSON data
+              var blob = new Blob([jsonData], { type: "application/json" });
+
+                // Create a link to download the JSON file
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement("a");
+                a.href = url;
+                a.download = "review.json";
+                document.body.appendChild(a);
+                a.click();
+
+                // Clean up
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+                
+            </script>
             <!--A form that will take in the entire user's review-->
             <form action="game-review" method="post">
                 <fieldset>
@@ -88,12 +123,10 @@
                         <textarea id="description" class="textarea" name="description" rows="2" cols="10" ></textarea>
                     </div>
                 </fieldset>
+                <button type="button" onclick="saveReview()">Submit</button>
             </form>
             
-            <!-- A script to store the login information of a user -->
-            <script>
-
-            </script>
+<            <!-- A script to store the login information of a user -->
 
             <!-- A script to pull up the window making sure that the user is ready to submit
                 their review-->
