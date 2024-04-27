@@ -58,19 +58,39 @@ img.tile {
         to { transform: translateX(-100%); }
     }
 
+    /* Apply animation to containers */
+    .animated-container {
+        position: relative;
+        overflow: hidden;
+    }
+
     /* Apply animation to images */
-    .tile1 {
+    .animated-picture {
         position: absolute;
+        width: 100%;
+        height: auto;
         animation-duration: 4s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
 
     /* Adjust animation delay for each image */
-    .tile1:nth-child(2) {
+    .animated-picture:nth-child(2) {
         animation-delay: 1s; /* Delay for the second image */
     }
 
-    .tile1:nth-child(3) {
+    .animated-picture:nth-child(3) {
         animation-delay: 2s; /* Delay for the third image */
+    }
+
+    .animated-picture:nth-child(4) {
+        animation-delay: 3s; /* Delay for the fourth image */
+    }
+
+    .animated-picture:nth-child(5) {
+        animation-delay: 4s; /* Delay for the fifth image */
+    }
+
+    .animated-picture:nth-child(6) {
+        animation-delay: 5s; /* Delay for the sixth image */
     }
