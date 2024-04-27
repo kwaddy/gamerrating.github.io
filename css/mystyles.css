@@ -38,4 +38,11 @@ p, footer {
     images */
 img {
     border-radius: 20%;
-} 
+}
+
+/*  A class to work with the images in class tile */ 
+.tile {
+    display: inline-block;
+    height: auto;
+    width: auto;
+}
