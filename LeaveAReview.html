@@ -59,7 +59,7 @@
             <form action="game-review" method="post">
                 <fieldset>
                     <legend>Game Review</legend>
-                    <p>Select a Game: </p>
+                    <p>Select a Game</p>
                     <div>
                         <select name="game-catalog">
                             <option value="apex">Apex Legends</option>
@@ -69,6 +69,22 @@
                             <option value="supersmash">Super Smash Bros Ultimate</option>
                             <option value="skyrim">The Elder Scrolls V: Skyrim</option>
                         </select>
+                    </div>
+                    
+                    <!--Name for user to put their information under-->
+                    <div class="input-group">
+                        <label for="name">Name :</label>
+                        <input id="name" name="name" type="text">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="rating">Rating (1-5) :</label>
+                        <input id="rating" name="rating" type="text" min="1" max="5" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="reviewText">Your Thoughts :</label>
+                        <textarea id="description" class="textarea" name="description" cols="30" rows="50"></textarea>
                     </div>
                 </fieldset>
             </form>
