@@ -2,8 +2,9 @@
 div, li, h1 {
    font-family: Helvetica;
 }
-/* Centers the ul to the center of the screen*/
-ul {
+/* Centers the ul to the center of the screen. Centered the footer as well
+    so all the information is center down on the page*/
+ul, footer {
     text-align: center;
 }
 /* This is to set the list so it is going from left to right instead of up and down*/ 
@@ -24,4 +25,11 @@ li {
 /* A way to center all the headers on a page*/ 
 h1, h3 {
     text-align: center;
+}
+/* Making the font size bigger for the paragraphs so that they easier to read on
+   bigger pages. This will allow the website to be more legible. Also did this
+   for the footer since I want them both to be using the same fontsize, making it
+   easier for others to read. */
+p, footer {
+    font-size: large;
 }
