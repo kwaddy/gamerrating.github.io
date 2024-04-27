@@ -45,7 +45,7 @@
             <!-- Explaination of what the page is and specifically what the person should
                  do to leave a review-->
             <div>
-                <p>
+                <p class="text-info">
                     So you saw a game that you played and you wanted to leave a review?
                     Well, you have come to the right place! Here, you can leave a review
                     for any game that is down in the list below! Here you will really
@@ -54,12 +54,24 @@
                     cry!
                 </p>
             </div>
-
-            <!-- A script will go here to store all the user input into a json file which can
-                 then be called upon on a later time. -->
-            <script>
-
-            </script>
+            
+            <div>
+                <form id="game-review" type="post">
+                    <fieldset>
+                        <legend>Game Review Form</legend>
+                        <p>Loved or hated a game? Leave a review!</p>
+                        <input list="game">
+                        <datalist id="game">
+                            <option value="Apex Legends">Apex Legends</option>
+                            <option value="Halo">Halo</option>
+                            <option value="Minecraft">Minecraft</option>
+                            <option value="Overwatch 2">Overwatch 2</option>
+                            <option value="Super Smash Bros: Ultimate">Super Smash Bros: Ultimate</option>
+                            <option value="The Elder Scrolls V: Skyrim">The Elver Scrolls V: Skyrim</option>
+                        </datalist>
+                    </fieldset>
+                </form>    
+            </div>
             
             <!-- A script to store the login information of a user -->
             <script>
